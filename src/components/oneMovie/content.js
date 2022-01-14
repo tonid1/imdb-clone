@@ -68,8 +68,8 @@ function Content(){
                     <h3>{movie.tagline}</h3>
                     <div className='one-movie-additional-info'>
                         {movie.runtime!==0 ? <h4>Runtime: {movie.runtime}min</h4> : <p />}
-                        {movie.budget!==0 ? <h4>Budget: ${movie.budget}</h4>  : <p />}
-                        {movie.revenue!==0 ? <h4>Revenue: ${movie.revenue}</h4> : <p />}
+                        {movie.budget!==0 ? <h4>Budget: {new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(movie.budget)}</h4>  : <p />}
+                        {movie.revenue!==0 ? <h4>Revenue: {new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(movie.revenue)}</h4> : <p />}
                         {movie.vote_average!==0 ? <h4>Av. score: {movie.vote_average}</h4> : <p />}
                     </div>
                 </div>
